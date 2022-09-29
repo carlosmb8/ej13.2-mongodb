@@ -31,12 +31,6 @@ public class PersonaControlador {
             return new PersonaOutputDTO(personaServiceImpl.buscarPersonaPorId(id));
     }
 
-    @PostMapping("personas")
-    public List<PersonaOutputDTO> damePersonaPorNombre(@RequestParam String name) throws Exception {
-
-        return personaServiceImpl.buscarPersonaPorName(name);
-    }
-
     @GetMapping("personas")
     public Iterable<Persona> damePersonas() throws Exception{
 
